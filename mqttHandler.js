@@ -20,7 +20,7 @@ module.exports = function(){
             weatherDate.savedAt = new Date();
             console.log(weatherDate);
             weather.create(weatherDate).then(w =>{
-            // console.log(w);
+                console.log(w);
             }).catch(erro => {
                 console.log(erro);
             })
