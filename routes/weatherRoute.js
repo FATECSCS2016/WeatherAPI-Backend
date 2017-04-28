@@ -3,6 +3,6 @@ var router = express.Router();
 var weathetCtrl = require("./../controllers/weatherController");
 
 /* GET users listing. */
-router.get('/weathers', weathetCtrl.getAll);
+router.get('/weathers', weathetCtrl.getAllDevices);
 
 module.exports = router;

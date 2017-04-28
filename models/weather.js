@@ -2,11 +2,12 @@ const mongoose = require('mongoose');
 const _db = require('./_db');
 
 const mqttWeatherSchema = mongoose.Schema({
+    device_id: mongoose.SchemaTypes.String,
     savedAt: mongoose.SchemaTypes.Date,
     location: {
         city: mongoose.SchemaTypes.String,
         country: mongoose.SchemaTypes.String,
-        coordinates: mongoose.SchemaTypes.Array
+        coordinates: []
     },
     data:{
         temperature: mongoose.SchemaTypes.Number,
