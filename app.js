@@ -7,15 +7,9 @@ var bodyParser = require('body-parser');
 var mqttHandler = require('./mqttHandler')();
 const cors =  require('cors');
 
-
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var weatherRoute = require('./routes/weatherRoute');
+var weatherRoute = require('./routes/stationRoute');
 
 var app = express();
-
-var oi = 'vitor';
-console.log(oi);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
