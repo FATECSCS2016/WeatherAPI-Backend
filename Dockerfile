@@ -7,6 +7,7 @@ WORKDIR /src
 # install the production dependencies from the package.json file
 RUN npm install --only=production
 
+RUN export NODE_ENV='production'
 # make port 80 available outside of the image
 EXPOSE 3000
 

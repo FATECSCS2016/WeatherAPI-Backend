@@ -1,12 +1,15 @@
 const mongoose = require('mongoose');
 const bluebird = require('bluebird');
+const config = require('./../config');
+
 let options = {
   db: { native_parser: true },
   server: { poolSize: 2 },
   promiseLibrary: bluebird,
 }
 
-mongoose.connect('mongodb://localhost/weatherDB', options);
+mongoose.connect(`mongodb://${config.databaseUrl}/weatherDB`, options);
+
 mongoose.Promise = bluebird; 
 
 let _db = mongoose.connection;
