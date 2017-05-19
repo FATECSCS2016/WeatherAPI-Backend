@@ -11,7 +11,8 @@ module.exports = function(){
     })
     
     client.on('connect', function () {
-    client.subscribe('sensor/temp');
+        console.log("Successfully Connected to the broker!!!");
+        client.subscribe('sensor/temp');
     })
     
     client.on('message', function (topic, message) {
