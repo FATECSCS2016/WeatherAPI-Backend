@@ -11,4 +11,4 @@ RUN npm install --only=production
 EXPOSE 3000
 
 # start node with the index.js file of our hello-world application
-CMD ["npm", "star"]
+CMD ["npm", "start"]
